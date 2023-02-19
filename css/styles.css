@@ -1,7 +1,4 @@
-body {
-  color: #434455;
-  font-family: "Roboto", sans-serif;
-}
+
 
 :root {
   --color-web: #4d5ae5;
@@ -15,6 +12,12 @@ body {
   --color-hover: #404bbf;
 }
 
+body {
+  color: var(--color-text);
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-white); 
+}
+
 /* --------------Navigation------------------ */
 
 .logo {
@@ -26,7 +29,10 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-web);
- 
+}
+
+a {
+  text-decoration: none;
 }
 
 .up > span {
@@ -50,10 +56,6 @@ body {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 .address-list {
   font-style: normal;
   font-size: 16px;
@@ -61,8 +63,8 @@ a {
   letter-spacing: 0.02em;
 }
 
-.address-list :hover,
-.address-list :focus {
+.address-list:hover,
+.address-list:focus {
   color: var(--color-hover);
 }
 
@@ -82,7 +84,7 @@ a {
 }
 
 .hero-btn {
-    font-family: 'Roboto';
+    font-family: inherit;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -92,10 +94,11 @@ a {
     background-color: var(--color-web);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    cursor: pointer;
 }
-.hero-btn :hover,
-.hero-btn :focus {
-  color: var(--color-hover);
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--color-hover);
 }
 /* ------------------ABOUT---------------------------- */
 
@@ -151,20 +154,23 @@ a {
     color: var(--color-title);
 }
 
-.team-subtitle {  
+.team-subtitle, .portfolio-subtitle {  
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    text-align: center;
     letter-spacing: 0.02em;
     color: var(--color-title);
 }
-.team-text {
-    font-weight: 400;
+.team-subtitle {
+  text-align: center;
+}
+.team-text, .portfolio-text {
     font-size: 16px;
     line-height: 1.5;
-    text-align: center;
     letter-spacing: 0.02em;
+}
+.team-text {
+  text-align: center;
 }
 /* ------------------FOOTER---------------------------- */
 .section-footer {
@@ -181,4 +187,17 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-footer-text);  
+}
+/* ------------------PORTFOLIO---------------------------- */
+
+.portfolio-btn {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--color-web);
+  cursor: pointer;
 }
