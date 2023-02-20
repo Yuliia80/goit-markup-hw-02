@@ -1,5 +1,4 @@
 
-
 :root {
   --color-web: #4d5ae5;
   --color-title: #2e2f42;
@@ -20,35 +19,35 @@ body {
 
 /* --------------Navigation------------------ */
 
+.link {
+  text-decoration: none;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.33;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--color-web);
 }
 
-a {
-  text-decoration: none;
+.nav-item > .link {
+  color: var(--color-title);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 .up > span {
     color: var(--color-title);
 }
 
-.nav-list {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--color-title);
-}
 
-.nav-list :hover,
-.nav-list :focus {
+.nav-item :hover,
+.nav-item :focus {
   color: var(--color-hover);
 }
 
@@ -56,15 +55,17 @@ a {
   list-style: none;
 }
 
-.address-list {
+.address-item > .link {
+  color: var(--color-text);
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
 }
 
-.address-list:hover,
-.address-list:focus {
+.address-item :hover,
+.address-item :focus {
   color: var(--color-hover);
 }
 
@@ -77,7 +78,7 @@ a {
 .hero-title {
   font-weight: 700;
   font-size: 56px;
-  line-height: 1.07px;
+  line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--color-white);
@@ -85,7 +86,6 @@ a {
 
 .hero-btn {
     font-family: inherit;
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -194,10 +194,13 @@ a {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.5px;
-  align-items: center;
-  text-align: center;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--color-web);
   cursor: pointer;
+}
+.portfolio-btn-item :hover,
+.portfolio-btn-item :focus {
+  color: var(--color-white);
+  background-color: var(--color-hover); 
 }
